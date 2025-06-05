@@ -1,27 +1,34 @@
 # Sigger
+
 Sigger is a CLI based static signature generator and resolver for ELF, PE and MachOs.
 
-# Features
-**addr-to-sig**
-input a static address from the input binary and almost instantaneously get a signature which will/should stay constant, even if the target binary is updated.
+## Features
 
-**sig-to-addr**
-input any signature, from this tool, IDA sig maker or Sigga (ghidra plugin), and it will return an offset/address corresponding to that signature. you may input wildcards yourself if needed.
+### **addr-to-sig**  
+Input a static address from the input binary and almost instantaneously get a signature which will/should stay constant, even if the target binary is updated.
 
-**prequisites**
--> capstone library
+### **sig-to-addr**  
+Input any signature, from this tool, IDA sig maker or Sigga (ghidra plugin), and it will return an offset/address corresponding to that signature. You may input wildcards yourself if needed.
 
--> a compatible C++17 supported compiler
+## Prequisites
 
-**How do I install it?**
--> look it up for your system. it's different for every system.
+- capstone library  
+- a compatible C++17 supported compiler
 
-**Compiling?**
--> ``git clone https://github.com/Ragekill3377/Sigger.git && cd Sigger && clang++ -std=c++17 main.cpp -lcapstone -o sig``
+## How do I install it?
 
-**Usage?**
-``./sig --help``
+Look it up for your system. It's different for every system.
 
--> and follow what it says. simple to use.
+## Compiling?
 
+```bash
+git clone https://github.com/Ragekill3377/Sigger.git && cd Sigger && clang++ -std=c++17 main.cpp -lcapstone -o sig
+```
 
+## Usage?
+
+```bash
+./sig --help
+```
+
+And follow what it says. Simple to use.
