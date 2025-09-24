@@ -1,6 +1,6 @@
-# Sigger
+# Sigger(ios)
 
-Sigger is a CLI based static signature generator and resolver for ELF, PE and MachOs.
+Sigger is a CLI based static signature generator and resolver optimised for MachO running on a jailbroken device in Terminal or via ssh
 
 ## Features
 
@@ -15,20 +15,8 @@ Input any signature, from this tool, IDA sig maker or Sigga (ghidra plugin), and
 - capstone library  
 - a compatible C++17 supported compiler
 
-## How do I install it?
-
-Look it up for your system. It's different for every system.
-
-## Compiling?
-
-```bash
-git clone https://github.com/Ragekill3377/Sigger.git && cd Sigger && clang++ -std=c++17 main.cpp -lcapstone -o sig
-```
-
 ## Usage?
 
 ```bash
 ./sig --help
 ```
-
-And follow what it says. Simple to use.
