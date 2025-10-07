@@ -5,7 +5,11 @@ Optimized for Jailbroken iOS CLI
 - Adjusted error handling for better iOS terminal support
 */
 
-#include <capstone/capstone.h>
+#include "capstone/capstone.h"
+
+#ifndef CS_ARCH_AARCH64
+#define CS_ARCH_AARCH64 CS_ARCH_ARM64
+#endif
 #include <fstream>
 #include <vector>
 #include <string>
@@ -101,7 +105,11 @@ private:
                             wildcard = true;
                             break;
                         }
-                        if (op.type == ARM64_OP_MEM && (op.mem.disp != 0 || op.mem.base == ARM64_REG_PC)) {
+                        if (op.type == ARM64_OP_MEM && (op.mem.disp != 0
+#ifdef ARM64_REG_PC
+                            || op.mem.base == ARM64_REG_PC
+#endif
+                        )) {
                             wildcard = true;
                             break;
                         }
