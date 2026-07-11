@@ -2,7 +2,7 @@
 
 Sigger is a CLI based static signature generator and resolver optimised for MachO running on a jailbroken device in Terminal or via ssh.
 
-Forked from ragekill's original to optimize for jailbroken deployment on ios 15+
+built on Ragekill3377 original idea, but rewritten to optimize for Apple iphone jailbroken deployment on ios 15+
 
 ## Features
 
